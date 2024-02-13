@@ -2,23 +2,25 @@ name: Hello there
 
 on: 
   push: 
-      branches: [main]
-    pull_request:
-      bracnhes: [main]
-    workflow_dispatch:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
-jobs: 
-  hello: 
-    runs-on: ubuntu-latest      
-    steps: 
-      - uses: actions/checkout@v3
-      - name: hello there
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Hello there
         run: echo "hello there"
         shell: bash
-  goodbye: 
-    runs-on: ubuntu-latest      
-    steps: 
-      - uses: actions/checkout@v3
-      - name: hello there
-        run: echo "hello there"
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Goodbye
+        run: echo "goodbye"
         shell: bash

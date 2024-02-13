@@ -1,5 +1,8 @@
 name: Issues Auto Commenter
 
+permission:
+  issues: write
+
 on: 
   issues: 
     types: [opened]
